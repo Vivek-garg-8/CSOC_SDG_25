@@ -20,7 +20,7 @@ A modern web app featuring three virtual instruments: Piano, Guitar, and Drum Ki
 
 **Piano:**
 - Click piano keys with mouse
-- Use keyboard: A S D F G H J (white keys), W E T Y U (black keys)
+- Use keyboard: c d e f g a b for white keys, C D F G A for black keys
 
 **Guitar:**
 - Click guitar strings with mouse  

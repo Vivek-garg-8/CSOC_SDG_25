@@ -1,0 +1,119 @@
+body {
+    background-color: #1e1e1e;
+    color: #fafafa;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.main-title {
+    font-size: 52px;
+    font-weight: bold;
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+    color: #fafafa;
+    text-shadow: 0 2px 16px #000a;
+    text-align: center;
+}
+
+.hero-img {
+    width: 96px;
+    margin-bottom: 20px;
+    opacity: 0.95;
+    filter: drop-shadow(0 4px 16px #0008);
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-card {
+    background: #23272f;
+    border: 3px solid #ffd700;
+    border-radius: 24px;
+    padding: 36px 48px;
+    min-width: 220px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 24px #000a;
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fafafa;
+}
+
+.menu-card:hover {
+    transform: scale(1.04) translateY(-4px);
+    box-shadow: 0 8px 32px #ffd70055;
+    border-color: #fff3cd;
+}
+
+.menu-card .icon {
+    font-size: 54px;
+    margin-bottom: 18px;
+}
+
+.menu-card .label {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.menu-card .desc {
+    font-size: 1em;
+    color: #ffd700;
+    opacity: 0.8;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.footer {
+    color: #888;
+    font-size: 0.95em;
+    margin-top: 50px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+    .menu {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .menu-card {
+        min-width: 0;
+        width: 80vw;
+        padding: 24px 0;
+    }
+
+    .main-title {
+        font-size: 2.2em;
+    }
+
+    .hero-img {
+        width: 80px;
+    }
+}

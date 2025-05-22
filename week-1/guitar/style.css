@@ -1,0 +1,123 @@
+body {
+  background-color: #1e1e1e;
+  color: #fafafa;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #fafafa; /* White, matching piano */
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 0 2px 16px #000a;
+    text-align: center;
+    width: 100%;
+  }
+  
+
+.guitar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.guitar-neck {
+  background: linear-gradient(90deg, #3c2f1e 70%, #5a4a2f 100%);
+  border-radius: 18px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 24px #000a;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.string {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #bdbdbd 0%, #ffd700 100%);
+  margin: 0 0 0 0;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.15s, transform 0.08s;
+  box-shadow: 0 1px 8px #0007;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 24px;
+  font-size: 1.1em;
+  color: #ffd700;
+  user-select: none;
+}
+
+.string span {
+  background: #23272f;
+  padding: 2px 10px;
+  border-radius: 7px;
+  font-size: 10px;
+  background-color: rgba(0, 0, 0, 0.51);
+  margin-left: 12px;
+  color: #fafafa;
+  box-shadow: 0 1px 4px #0006;
+}
+
+.string:active,
+.string.playing {
+  background: linear-gradient(90deg, #ffd700 0%, #bdbdbd 100%);
+  box-shadow: 0 2px 16px #ffd70088;
+  transform: scaleX(1.03);
+}
+
+.instructions {
+  background: #23272f;
+  color: #fafafa;
+  padding: 20px 28px;
+  border-radius: 12px;
+  max-width: 520px;
+  margin: 32px auto 24px auto;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  border: 1.5px solid #3c3f4a;
+  font-size: 1rem;
+}
+
+.instructions h2 {
+  margin-bottom: 12px;
+  color: #ffd700;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.instructions ul {
+  list-style: disc inside;
+  padding-left: 0;
+  margin: 0;
+}
+
+.instructions li {
+  margin-bottom: 7px;
+  line-height: 1.6;
+}
+
+.fret-marker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #ffd700;
+  border-radius: 50%;
+  opacity: 0.5;
+}

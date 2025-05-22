@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Piano</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <h1 class="title">VIRTUAL PIANO</h1>
+
+    <div class="piano">
+        <!-- White Keys -->
+        <div class="white-keys">
+            <div class="white-key" data-note="C" style="border-top-left-radius: 24px; border-bottom-left-radius: 24px;">C</div>
+            <div class="white-key" data-note="D">D</div>
+            <div class="white-key" data-note="E">E</div>
+            <div class="white-key" data-note="F">F</div>
+            <div class="white-key" data-note="G">G</div>
+            <div class="white-key" data-note="A">A</div>
+            <div class="white-key" data-note="B" style="border-top-right-radius: 24px; border-bottom-right-radius: 24px;">B</div>
+        </div>
+
+        <!-- Black Keys -->
+        <div class="black-keys">
+            <div class="black-key" style="left: 95px;" data-note="Cs">C#</div>
+            <div class="black-key" style="left: 195px;" data-note="Ds">D#</div>
+            <div class="black-key-spacer"></div>
+            <div class="black-key" style="left: 395px;" data-note="Fs">F#</div>
+            <div class="black-key" style="left: 495px;" data-note="Gs">G#</div>
+            <div class="black-key" style="left: 595px;" data-note="As">A#</div>
+        </div>
+    </div>
+    <section class="instructions">
+        <h2>📘 How to Play</h2>
+        <ul>
+            <li>Click or tap the piano keys to play notes.</li>
+            <li>Use your keyboard: c d e f g a b for white keys, C D F G A for black keys.</li>
+            <li>Each key will animate while the sound plays.</li>
+        </ul>
+      </section>
+      
+    <script src="script.js"></script>
+</body>
+
+</html>

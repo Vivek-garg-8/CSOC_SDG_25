@@ -1,0 +1,124 @@
+body {
+  background: #1e1e1e;
+  color: #fafafa;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  font-size: 48px;
+  margin: 40px 0 32px 0;
+  color: #fafafa;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 0 2px 16px #000a;
+  text-align: center;
+  width: 100%;
+}
+.drumkit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 36px;
+  gap: 18px;
+}
+.drum-row {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+}
+.drum {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(ellipse at 60% 40%, #ffd700 60%, #b8860b 100%);
+  border: 6px solid #fff3cd;
+  border-radius: 50%;
+  box-shadow: 0 4px 24px #000a, 0 0 0 8px #23272f;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 1.3em;
+  color: #23272f;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
+  user-select: none;
+  outline: none;
+}
+.drum:active,
+.drum.playing {
+  background: radial-gradient(ellipse at 60% 40%, #fff8dc 70%, #ffd700 100%);
+  box-shadow: 0 8px 32px #ffd70055, 0 0 0 12px #23272f;
+  transform: scale(0.95);
+  border-color: #ffd700;
+}
+.drum-label {
+  margin-bottom: 38px;
+  background: #23272fbb;
+  padding: 3px 12px;
+  border-radius: 12px;
+  color: #fafafa;
+  font-size: 12px;
+  box-shadow: 0 2px 8px #0007;
+}
+.instructions {
+  background: #23272f;
+  color: #fafafa;
+  padding: 20px 28px;
+  border-radius: 12px;
+  max-width: 520px;
+  margin: 32px auto 24px auto;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  border: 1.5px solid #3c3f4a;
+  font-size: 1rem;
+  text-align: center;
+}
+.instructions h2 {
+  margin-bottom: 12px;
+  color: #ffd700;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+.instructions ul {
+  list-style: disc inside;
+  padding-left: 0;
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+}
+.instructions li {
+  margin-bottom: 7px;
+  line-height: 1.6;
+}
+@media (max-width: 700px) {
+  .drumkit {
+    gap: 10px;
+  }
+  .drum-row {
+    gap: 12px;
+  }
+  .drum {
+    width: 70px;
+    height: 70px;
+    font-size: 0.9em;
+  }
+  .drum-label {
+    margin-bottom: 16px;
+    font-size: 1em;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+}

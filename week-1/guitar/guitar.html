@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Guitar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+</head>
+
+<body>
+  <h1 class="title">Virtual Guitar</h1>
+  <div class="guitar">
+    <div class="guitar-neck">
+      <div class="fret-marker" style="top: 25%; left: 8px;"></div>
+      <div class="fret-marker" style="top: 50%; left: 8px;"></div>
+      <div class="fret-marker" style="top: 75%; left: 8px;"></div>
+
+      <div class="string" data-note="E"><span>E (A)</span></div>
+      <div class="string" data-note="A"><span>A (S)</span></div>
+      <div class="string" data-note="D"><span>D (D)</span></div>
+      <div class="string" data-note="G"><span>G (F)</span></div>
+      <div class="string" data-note="B"><span>B (G)</span></div>
+      <div class="string" data-note="es"><span>e (H)</span></div>
+    </div>
+  </div>
+
+  <section class="instructions">
+    <h2>📘 How to Play</h2>
+    <ul>
+      <li>Click on any string or press the matching key.</li>
+      <li>The string will light up and play a sound.</li>
+      <li>Experiment to create your own tunes!</li>
+    </ul>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>

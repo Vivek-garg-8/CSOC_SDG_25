@@ -1,34 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virtual Drum Kit</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Drum Kit</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1 class="title">🥁 Virtual Drum Kit</h1>
-  <div class="drumkit">
-    <div class="drum-row">
-      <div class="drum" data-sound="crash"><span class="drum-label">Crash<br>(Q)</span></div>
-      <div class="drum" data-sound="ride"><span class="drum-label">Ride<br>(W)</span></div>
-      <div class="drum" data-sound="hihat"><span class="drum-label">Hi-Hat<br>(E)</span></div>
+    <div class="theme-toggle" id="theme-toggle">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
     </div>
-    <div class="drum-row">
-      <div class="drum" data-sound="snare"><span class="drum-label">Snare<br>(A)</span></div>
-      <div class="drum" data-sound="kick"><span class="drum-label">Kick<br>(S)</span></div>
-      <div class="drum" data-sound="tom"><span class="drum-label">Tom<br>(D)</span></div>
+
+    <div id="app">
+        <h1 class="title">VIRTUAL DRUM KIT</h1>
+
+        <div class="drumkit">
+            <div class="drum-row">
+                <div class="drum" data-sound="crash" data-key="q">
+                    <div class="drum-label">Crash<br>(Q)</div>
+                </div>
+                <div class="drum" data-sound="ride" data-key="w">
+                    <div class="drum-label">Ride<br>(W)</div>
+                </div>
+                <div class="drum" data-sound="hihat" data-key="e">
+                    <div class="drum-label">Hi-Hat<br>(E)</div>
+                </div>
+            </div>
+            <div class="drum-row">
+                <div class="drum" data-sound="snare" data-key="a">
+                    <div class="drum-label">Snare<br>(A)</div>
+                </div>
+                <div class="drum" data-sound="kick" data-key="s">
+                    <div class="drum-label">Kick<br>(S)</div>
+                </div>
+                <div class="drum" data-sound="tom" data-key="d">
+                    <div class="drum-label">Tom<br>(D)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="controls-grid">
+                <div class="volume-section">
+                    <div class="volume-label">
+                        <span>🔊</span>
+                        <span>Volume Control</span>
+                    </div>
+                    <div class="volume-slider-container">
+                        <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="record-btn" class="btn">🎤 Record</button>
+                    <button id="stop-btn" class="btn" disabled>⏹️ Stop</button>
+                    <button id="download-btn" class="btn" disabled>📥 Download</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>📘 How to Play</h2>
+            <ul>
+                <li>Click or tap the drums to play sounds</li>
+                <li>Use keyboard: Q W E A S D for different drums</li>
+                <li>Each drum will animate while playing</li>
+                <li>Record your performance and download it</li>
+                <li>Adjust volume with the slider</li>
+            </ul>
+        </div>
+        <div class="footer">
+            Created By Vivek Garg(24075096)
+        </div>
     </div>
-  </div>
-  <section class="instructions">
-    <h2>📘 How to Play</h2>
-    <ul>
-      <li>Click or tap the drums to play sounds.</li>
-      <li>Use your keyboard: Q W E A S D for different drums.</li>
-      <li>Each drum will animate while the sound plays.</li>
-    </ul>
-  </section>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

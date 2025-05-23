@@ -2,47 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Piano</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1 class="title">VIRTUAL PIANO</h1>
+    <div class="theme-toggle" id="theme-toggle">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    </div>
 
-    <div class="piano">
-        <!-- White Keys -->
-        <div class="white-keys">
-            <div class="white-key" data-note="C" style="border-top-left-radius: 24px; border-bottom-left-radius: 24px;">C</div>
-            <div class="white-key" data-note="D">D</div>
-            <div class="white-key" data-note="E">E</div>
-            <div class="white-key" data-note="F">F</div>
-            <div class="white-key" data-note="G">G</div>
-            <div class="white-key" data-note="A">A</div>
-            <div class="white-key" data-note="B" style="border-top-right-radius: 24px; border-bottom-right-radius: 24px;">B</div>
+    <div id="app">
+        <h1 class="title">VIRTUAL PIANO</h1>
+
+        <div class="piano">
+            <div class="white-keys" id="piano-keyboard"></div>
+            <div class="black-keys" id="black-keys-container"></div>
         </div>
 
-        <!-- Black Keys -->
-        <div class="black-keys">
-            <div class="black-key" style="left: 95px;" data-note="Cs">C#</div>
-            <div class="black-key" style="left: 195px;" data-note="Ds">D#</div>
-            <div class="black-key-spacer"></div>
-            <div class="black-key" style="left: 395px;" data-note="Fs">F#</div>
-            <div class="black-key" style="left: 495px;" data-note="Gs">G#</div>
-            <div class="black-key" style="left: 595px;" data-note="As">A#</div>
+        <div class="controls">
+            <div class="controls-grid">
+                <div class="volume-section">
+                    <div class="volume-label">
+                        <span>🔊</span>
+                        <span>Volume Control</span>
+                    </div>
+                    <div class="volume-slider-container">
+                        <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="record-btn" class="btn">🎤 Record</button>
+                    <button id="stop-btn" class="btn" disabled>⏹️ Stop</button>
+                    <button id="download-btn" class="btn" disabled>📥 Download</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>📘 How to Play</h2>
+            <ul>
+                <li>Lower row (Z-M): C4 to B4</li>
+                <li>Upper row (Q-U): C5 to B5</li>
+                <li>Numbers for black keys</li>
+                <li>Click or tap any key to play</li>
+                <li>Record audio as .webm and notes as .json</li>
+            </ul>
+        </div>
+        <div class="footer">
+            Created By Vivek Garg(24075096)
         </div>
     </div>
-    <section class="instructions">
-        <h2>📘 How to Play</h2>
-        <ul>
-            <li>Click or tap the piano keys to play notes.</li>
-            <li>Use your keyboard: c d e f g a b for white keys, C D F G A for black keys.</li>
-            <li>Each key will animate while the sound plays.</li>
-        </ul>
-      </section>
-      
+
     <script src="script.js"></script>
 </body>
 

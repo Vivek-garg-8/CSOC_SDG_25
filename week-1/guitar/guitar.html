@@ -2,40 +2,65 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Virtual Guitar</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1 class="title">Virtual Guitar</h1>
-  <div class="guitar">
-    <div class="guitar-neck">
-      <div class="fret-marker" style="top: 25%; left: 8px;"></div>
-      <div class="fret-marker" style="top: 50%; left: 8px;"></div>
-      <div class="fret-marker" style="top: 75%; left: 8px;"></div>
-
-      <div class="string" data-note="E"><span>E (A)</span></div>
-      <div class="string" data-note="A"><span>A (S)</span></div>
-      <div class="string" data-note="D"><span>D (D)</span></div>
-      <div class="string" data-note="G"><span>G (F)</span></div>
-      <div class="string" data-note="B"><span>B (G)</span></div>
-      <div class="string" data-note="es"><span>e (H)</span></div>
-    </div>
+  <div class="theme-toggle" id="theme-toggle">
+    <span class="sun-icon">☀️</span>
+    <span class="moon-icon">🌙</span>
   </div>
 
-  <section class="instructions">
-    <h2>📘 How to Play</h2>
-    <ul>
-      <li>Click on any string or press the matching key.</li>
-      <li>The string will light up and play a sound.</li>
-      <li>Experiment to create your own tunes!</li>
-    </ul>
-  </section>
+  <div id="app">
+    <h1 class="title">Virtual Guitar</h1>
+
+    <div class="guitar-container">
+      <div class="guitar-neck">
+        <div class="string guitar-string" data-note="E">E <span class="key-hint">(A)</span></div>
+        <div class="string guitar-string" data-note="A">A <span class="key-hint">(S)</span></div>
+        <div class="string guitar-string" data-note="D">D <span class="key-hint">(D)</span></div>
+        <div class="string guitar-string" data-note="G">G <span class="key-hint">(F)</span></div>
+        <div class="string guitar-string" data-note="B">B <span class="key-hint">(G)</span></div>
+        <div class="string guitar-string" data-note="es">e <span class="key-hint">(H)</span></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="controls-grid">
+        <div class="volume-section">
+          <div class="volume-label">🔊 Volume Control</div>
+          <div class="volume-slider-container">
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="0.6">
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn" id="record-btn">🎤 Record</button>
+          <button class="btn" id="stop-btn" disabled>⏹️ Stop</button>
+          <button class="btn" id="download-btn" disabled>📥 Download</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h2>📘 How to Play</h2>
+      <ul>
+        <li>Click on any string or press the matching key</li>
+        <li>Strings will light up and play a realistic guitar sound</li>
+        <li>Record your performance and download as audio (.webm)</li>
+        <li>Adjust volume with the slider</li>
+        <li>Use keyboard shortcuts: A(E), S(A), D(D), F(G), G(B), H(e)</li>
+      </ul>
+    </div>
+    <div class="footer">
+      Created By Vivek Garg(24075096)
+    </div>
+  </div>
   <script src="script.js"></script>
+
 </body>
 
 </html>
